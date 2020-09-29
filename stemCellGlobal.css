@@ -89,7 +89,7 @@ button[slot="ar-button"] {
     overflow: hidden;
     position: absolute;
     bottom: 16px;
-    /* outline: red dashed;*/
+    outline: red dashed;
 } 
 
 .slides {
@@ -98,7 +98,7 @@ button[slot="ar-button"] {
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     margin: auto;
-    /* outline: orange dotted; */
+    outline: orange dotted;
 }
 
 .slide {
@@ -116,7 +116,7 @@ button[slot="ar-button"] {
     border-radius: 10px;
     border: none;
     display: flex;
-    /* outline: green dashed; */
+    outline: green dashed;
 }
 
 .slide.selected {
