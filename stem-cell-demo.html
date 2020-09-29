@@ -114,7 +114,6 @@
 
 <div class="scrollama-model-viewer">
     <div class="model-viewer-container">
-
         <model-viewer class="model-viewer-stem" id="model-viewer-foot01" loading="eager" reveal="auto"
             poster="https://alexli016.github.io/stemCell_janelleFoot/JanelleFoot_01_poster.png"
             src="https://alexli016.github.io/stemCell_janelleFoot/foot_01.glb" alt="A 3D model of Janelle's Foot"
@@ -303,7 +302,6 @@
                         <p class="btn-annotation"> Second <br>Treatment </p>
                     </button>
 
-
                 </div>
             </div>
         </model-viewer>
@@ -434,110 +432,110 @@
 <!-- =================DELETE THIS PART================= -->
 
 <script>
-    // var orbit = document.getElementsByTagName('model-viewer')[0].getAttribute('camera-orbit');
+    //var orbit = document.getElementsByTagName('model-viewer')[0].getAttribute('camera-orbit');
     // console.log('orbit = ' + orbit);
-    (function () {
-        // instantiate the scrollama
-        const scrollama_foot01 = scrollama();
-        // setup the instance, pass callback functions
+    // (function () {
+    // instantiate the scrollama
+    const scrollama_foot01 = scrollama();
+    // setup the instance, pass callback functions
 
-        scrollama_foot01
-            .setup({
-                step: "#scrollTexts_01 .step",
-                debug: true,
-                offset: 0
-            })
+    scrollama_foot01
+        .setup({
+            step: ".step",
+            debug: true,
+            offset: 0
+        })
 
-            .onStepEnter(response => {
-                // { element, index, direction }
+        .onStepEnter(response => {
+            // { element, index, direction }
 
-                function changeCameraOrbit01_01() {
+            function changeCameraOrbit01_01() {
 
-                    let newIndex = response.index;
-                    let direction = response.direction;
+                let newIndex = response.index;
+                let direction = response.direction;
 
-                    if (newIndex == 0 && direction == 'down') {
-                        $("#model-viewer-foot01").attr("camera-orbit", "-17.76deg 102.2deg 0.2586m");
-                    }
-                    else if (newIndex == 0 && direction == 'up') {
-                        // $("foot01-viewer").attr("camera-orbit", "-10deg -70deg auto");
-                        $("#model-viewer-foot01").attr("camera-orbit", "-17.76deg 102.2deg 0.2586m");
-                        $("#model-viewer-btn-foot01").css("visibility", "visible");
-                    }
-                    else if (newIndex == 1 && direction == "down") {
-                        $("#model-viewer-foot01").attr("camera-orbit", "-27.36deg 125.7deg 0.1966m");
-                        // document.getElementsByTagName('foot01-viewer')[0].removeAttribute('camera-controls', '');
-                    }
-                    else if (newIndex == 1 && direction == "up") {
-                        $("#model-viewer-foot01").attr("camera-orbit", "-17.76deg 102.2deg 0.2586m");
-                        // document.getElementsByTagName('foot01-viewer')[0].removeAttribute('camera-controls', '');
-                    }
-                    else if (newIndex == 2 && direction == "down") {
-                        $("#model-viewer-foot01").attr("camera-orbit", "43.2deg 130deg 0.1966m");
-                        // document.getElementsByTagName("foot01-viewer")[0].setAttribute("camera-controls", '');
-                    }
-                    else if (newIndex == 2 && direction == "up") {
-                        // document.getElementsByTagName("foot01-viewer")[0].setAttribute("camera-orbit", "50deg 50deg 100%");
-                        // document.getElementsByTagName("foot01-viewer")[0].setAttribute("camera-controls", '');
-                    }
+                if (newIndex == 0 && direction == 'down') {
+                    $("#model-viewer-foot01").attr("camera-orbit", "-17.76deg 102.2deg 0.2586m");
                 }
-
-                changeCameraOrbit01_01();
-
-                console.log("Entered");
-                console.log(response.index);
-                console.log(response.direction);
-
-                var newOrbit = document.getElementsByTagName('model-viewer')[0].getAttribute('camera-orbit');
-                console.log('newOrbit = ' + newOrbit);
-            })
-
-            .onStepExit(response => {
-                // { element, index, direction }
-                function changeCameraOrbit01_02() {
-
-                    let newIndex = response.index;
-                    let direction = response.direction;
-
-                    if (newIndex == 0 && direction == "down") {
-                        $("#model-viewer-foot01").attr("camera-orbit", "-17.76deg 102.2deg 0.2586m");
-                        $("#model-viewer-btn-foot01").css("visibility", "hidden");
-                    }
-                    else if (newIndex == 0 && direction == "up") {
-                        $("#model-viewer-foot01").attr("camera-orbit", "-3.36deg 34.98deg 0.2586m");
-
-                    }
-                    else if (newIndex == 1 && direction == "down") {
-                        //    $("foot01-viewer").attr("camera-orbit", "-0.10890854532444275rad 1.3728759896187395rad auto");
-                        $("#model-viewer-foot01").attr("camera-orbit", "-27.36deg 125.7deg 0.1966m")
-                    }
-                    else if (newIndex == 1 && direction == "up") {
-                        $("#model-viewer-foot01").attr("camera-orbit", "-17.76deg 102.2deg 0.2586m")
-                        // document.getElementsByTagName('foot01-viewer')[0].removeAttribute('camera-controls', '');
-                    }
-                    else if (newIndex == 2 && direction == "down") {
-                        $("#model-viewer-foot01").attr("camera-orbit", "43.2deg 130deg 0.1966m");
-                        // document.getElementsByTagName('foot01-viewer')[0].setAttribute('camera-controls', '');
-                    }
-                    else if (newIndex == 2 && direction == "up") {
-                        $("#model-viewer-foot01").attr("camera-orbit", "-27.36deg 125.7deg 0.1966m");
-                        // document.getElementsByTagName('foot01-viewer')[0].removeAttribute('camera-controls', '');
-                    }
+                else if (newIndex == 0 && direction == 'up') {
+                    // $("foot01-viewer").attr("camera-orbit", "-10deg -70deg auto");
+                    $("#model-viewer-foot01").attr("camera-orbit", "-17.76deg 102.2deg 0.2586m");
+                    $("#model-viewer-btn-foot01").css("visibility", "visible");
                 }
-                changeCameraOrbit01_02();
+                else if (newIndex == 1 && direction == "down") {
+                    $("#model-viewer-foot01").attr("camera-orbit", "-27.36deg 125.7deg 0.1966m");
+                    // document.getElementsByTagName('foot01-viewer')[0].removeAttribute('camera-controls', '');
+                }
+                else if (newIndex == 1 && direction == "up") {
+                    $("#model-viewer-foot01").attr("camera-orbit", "-17.76deg 102.2deg 0.2586m");
+                    // document.getElementsByTagName('foot01-viewer')[0].removeAttribute('camera-controls', '');
+                }
+                else if (newIndex == 2 && direction == "down") {
+                    $("#model-viewer-foot01").attr("camera-orbit", "43.2deg 130deg 0.1966m");
+                    // document.getElementsByTagName("foot01-viewer")[0].setAttribute("camera-controls", '');
+                }
+                else if (newIndex == 2 && direction == "up") {
+                    // document.getElementsByTagName("foot01-viewer")[0].setAttribute("camera-orbit", "50deg 50deg 100%");
+                    // document.getElementsByTagName("foot01-viewer")[0].setAttribute("camera-controls", '');
+                }
+            }
 
-                console.log("Exit");
-                console.log(response.index);
-                console.log(response.direction);
+            changeCameraOrbit01_01();
 
-                var newOrbit = document.getElementsByTagName('model-viewer')[0].getAttribute('camera-orbit');
-                console.log('newOrbit = ' + newOrbit);
-            })
+            console.log("Entered");
+            console.log(response.index);
+            console.log(response.direction);
 
-        // setup resize event
-        window.addEventListener("resize", scrollama_foot01.resize);
+            var newOrbit = document.getElementsByTagName('model-viewer')[0].getAttribute('camera-orbit');
+            console.log('newOrbit = ' + newOrbit);
+        })
 
-    }());
+        .onStepExit(response => {
+            // { element, index, direction }
+            function changeCameraOrbit01_02() {
+
+                let newIndex = response.index;
+                let direction = response.direction;
+
+                if (newIndex == 0 && direction == "down") {
+                    $("#model-viewer-foot01").attr("camera-orbit", "-17.76deg 102.2deg 0.2586m");
+                    $("#model-viewer-btn-foot01").css("visibility", "hidden");
+                }
+                else if (newIndex == 0 && direction == "up") {
+                    $("#model-viewer-foot01").attr("camera-orbit", "-3.36deg 34.98deg 0.2586m");
+
+                }
+                else if (newIndex == 1 && direction == "down") {
+                    //    $("foot01-viewer").attr("camera-orbit", "-0.10890854532444275rad 1.3728759896187395rad auto");
+                    $("#model-viewer-foot01").attr("camera-orbit", "-27.36deg 125.7deg 0.1966m")
+                }
+                else if (newIndex == 1 && direction == "up") {
+                    $("#model-viewer-foot01").attr("camera-orbit", "-17.76deg 102.2deg 0.2586m")
+                    // document.getElementsByTagName('foot01-viewer')[0].removeAttribute('camera-controls', '');
+                }
+                else if (newIndex == 2 && direction == "down") {
+                    $("#model-viewer-foot01").attr("camera-orbit", "43.2deg 130deg 0.1966m");
+                    // document.getElementsByTagName('foot01-viewer')[0].setAttribute('camera-controls', '');
+                }
+                else if (newIndex == 2 && direction == "up") {
+                    $("#model-viewer-foot01").attr("camera-orbit", "-27.36deg 125.7deg 0.1966m");
+                    // document.getElementsByTagName('foot01-viewer')[0].removeAttribute('camera-controls', '');
+                }
+            }
+            changeCameraOrbit01_02();
+
+            console.log("Exit");
+            console.log(response.index);
+            console.log(response.direction);
+
+            var newOrbit = document.getElementsByTagName('model-viewer')[0].getAttribute('camera-orbit');
+            console.log('newOrbit = ' + newOrbit);
+        })
+
+    // setup resize event
+    window.addEventListener("resize", scrollama_foot01.resize);
+
+    // }());
 
     //=========================This is compare part=================================
 
