@@ -116,12 +116,10 @@
     <div class="model-viewer-container">
 
         <model-viewer class="model-viewer-stem" id="model-viewer-foot01" loading="eager" reveal="auto"
-            poster="https://alexli016.github.io/stemCell_janelleFoot/JanelleFoot_01_poster.png" ar
+            poster="https://alexli016.github.io/stemCell_janelleFoot/JanelleFoot_01_poster.png"
             src="https://alexli016.github.io/stemCell_janelleFoot/foot_01.glb" alt="A 3D model of Janelle's Foot"
-            ios-src="https://alexli016.github.io/stemCell_janelleFoot/foot_01.usdz" exposure="1.5"
-            environment-image="https://alexli016.github.io/modelviewer/white_bg.jpg"
-            camera-orbit="-3.36deg 34.98deg 0.2586m" camera-target="0.01m 0.02m 0m" field-of-view="50deg"
-            quick-look-browsers="safari chrome">
+            exposure="1.5" environment-image="https://alexli016.github.io/modelviewer/white_bg.jpg"
+            camera-orbit="-3.36deg 34.98deg 0.2586m" camera-target="0.01m 0.02m 0m" field-of-view="50deg">
             <!--END OF MODEL VIEWER-->
 
             <button class="model-viewer-btn" id="model-viewer-btn-foot01" slot="hotspot-foot01-wound"
@@ -129,10 +127,6 @@
                 data-normal="-0.31599026606017633m -0.9337136985655429m 0.16831185598844053m"
                 data-visibility-attribute="visible">
                 <div id="annotation-foot01-wound">Put texts here: the wound is 1.5 inches wide and 4 inches high</div>
-            </button>
-
-            <button slot="ar-button">
-                Tap to Enable AR
             </button>
         </model-viewer>
     </div>
@@ -284,11 +278,12 @@
 <div id="model-viewer-compare">
 
     <div class="model-viewer-container">
-        <model-viewer class="model-viewer-stem" id="model-viewer-foot-compare" loading="eager"
-        ar src="https://alexli016.github.io/stemCell_janelleFoot/foot_01.glb" ios-src="https://alexli016.github.io/stemCell_janelleFoot/foot_01.usdz" alt="A 3D model of Janelle's Foot"
+        <model-viewer class="model-viewer-stem" id="model-viewer-foot-compare" loading="eager" ar
+            src="https://alexli016.github.io/stemCell_janelleFoot/foot_01.glb"
+            ios-src="https://alexli016.github.io/stemCell_janelleFoot/foot_01.usdz" alt="A 3D model of Janelle's Foot"
             exposure="1.2" environment-image="https://alexli016.github.io/modelviewer/white_bg.jpg" camera-controls
             field-of-view="45deg" min-camera-orbit="-30deg 29deg 0.28m" max-camera-orbit="30deg 133deg 0.29m"
-            interaction-prompt-style="wiggle"  quick-look-browsers="safari chrome">
+            interaction-prompt-style="wiggle" quick-look-browsers="safari chrome">
 
             <button slot="ar-button">
                 Tap to Enable AR
@@ -304,7 +299,7 @@
                         style="background-image: url('https://alexli016.github.io/stemCell_janelleFoot/foot_02_poster.png');">
                     </button>
 
-                    
+
                 </div>
             </div>
         </model-viewer>
@@ -550,8 +545,8 @@
         modelViewerFootCompare.src = base + '.glb';
         modelViewerFootCompare.iosSrc = base + '.usdz';
         modelViewerFootCompare.poster = base + '_poster.png';
-       
-        
+
+
         const slides = document.querySelectorAll(".slide");
         slides.forEach((element) => { element.classList.remove("selected"); });
         element.classList.add("selected");
