@@ -81,6 +81,9 @@ button[slot="ar-button"] {
 /* This keeps child nodes hidden while the element loads */
 
 /* ==========THIS IS FOR janelleFoot_compare.html=========== */
+#model-viewer-compare {
+    display: block;
+}
 
 .slider {
     height: 15%;
@@ -215,6 +218,10 @@ model-viewer {
     background-color: tomato;
     color: #fff;
 }
+
+
+
+
 
 /* scrollStorytelling CSS ends here */
 
