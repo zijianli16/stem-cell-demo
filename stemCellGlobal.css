@@ -145,6 +145,13 @@ model-viewer#reveal {
 model-viewer {
     --progress-bar-color: #4285f4;
 }
+
+.but-annotation {
+    position: absolute;
+    color: #282828;
+    bottom: 0;
+    font-size: small;
+}
 /* ==========THIS IS FOR janelleFoot_compare.html=========== */
 
 /* <Model-viewer> CSS ends here */
