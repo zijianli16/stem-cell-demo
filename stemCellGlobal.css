@@ -146,7 +146,7 @@ model-viewer {
     --progress-bar-color: #4285f4;
 }
 
-.but-annotation {
+.btn-annotation {
     position: absolute;
     color: #282828;
     bottom: 0;
