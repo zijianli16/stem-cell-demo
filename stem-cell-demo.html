@@ -1,13 +1,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Import srollama scripts -->
+<script src="https://unpkg.com/scrollama"></script>
+<!-- End of scrollama section -->
 <!--Import the Google model-viewer component-->
 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
 <!--End of Google model-viewer-->
-<!-- Import srollama scripts -->
-<script src="https://unpkg.com/scrollama"></script>
-<!-- End of scrollama section -->
+
 
 <link rel="stylesheet" href="stemCellGlobal.css">
 
@@ -114,8 +115,8 @@
 
 <div class="scrollama-model-viewer">
     <div class="model-viewer-container">
-        <model-viewer class="model-viewer-stem" id="model-viewer-foot01" loading="eager" reveal="auto"
-            poster="https://alexli016.github.io/stemCell_janelleFoot/JanelleFoot_01_poster.png"
+        <model-viewer class="model-viewer-stem" id="model-viewer-foot01"
+            poster="https://alexli016.github.io/stemCell_janelleFoot/JanelleFoot_01_poster.png" loading="eager"
             src="https://alexli016.github.io/stemCell_janelleFoot/foot_01.glb" alt="A 3D model of Janelle's Foot"
             exposure="1.5" environment-image="https://alexli016.github.io/modelviewer/white_bg.jpg"
             camera-orbit="-3.36deg 34.98deg 0.2586m" camera-target="0.01m 0.02m 0m" field-of-view="50deg">
@@ -434,6 +435,9 @@
 <script>
     //var orbit = document.getElementsByTagName('model-viewer')[0].getAttribute('camera-orbit');
     // console.log('orbit = ' + orbit);
+
+    // $("#model-viewer-foot01").attr("camera-orbit", "-3.36deg 34.98deg 0.2586m");
+
     // (function () {
     // instantiate the scrollama
     const scrollama_foot01 = scrollama();
@@ -442,7 +446,7 @@
     scrollama_foot01
         .setup({
             step: ".step",
-            debug: true,
+            //debug: true,
             offset: 0
         })
 
@@ -475,8 +479,7 @@
                     // document.getElementsByTagName("foot01-viewer")[0].setAttribute("camera-controls", '');
                 }
                 else if (newIndex == 2 && direction == "up") {
-                    // document.getElementsByTagName("foot01-viewer")[0].setAttribute("camera-orbit", "50deg 50deg 100%");
-                    // document.getElementsByTagName("foot01-viewer")[0].setAttribute("camera-controls", '');
+                    $("#model-viewer-foot01").attr("camera-orbit", "43.2deg 130deg 0.1966m");
                 }
             }
 
@@ -486,8 +489,8 @@
             console.log(response.index);
             console.log(response.direction);
 
-            var newOrbit = document.getElementsByTagName('model-viewer')[0].getAttribute('camera-orbit');
-            console.log('newOrbit = ' + newOrbit);
+            // var newOrbit = document.getElementsByTagName('model-viewer')[0].getAttribute('camera-orbit');
+            // console.log('newOrbit = ' + newOrbit);
         })
 
         .onStepExit(response => {
@@ -522,18 +525,20 @@
                     // document.getElementsByTagName('foot01-viewer')[0].removeAttribute('camera-controls', '');
                 }
             }
+
             changeCameraOrbit01_02();
 
             console.log("Exit");
             console.log(response.index);
             console.log(response.direction);
 
-            var newOrbit = document.getElementsByTagName('model-viewer')[0].getAttribute('camera-orbit');
-            console.log('newOrbit = ' + newOrbit);
+            // var newOrbit = document.getElementsByTagName('model-viewer')[0].getAttribute('camera-orbit');
+            // console.log('newOrbit = ' + newOrbit);
         })
 
     // setup resize event
     window.addEventListener("resize", scrollama_foot01.resize);
+
 
     // }());
 
@@ -554,4 +559,5 @@
         slides.forEach((element) => { element.classList.remove("selected"); });
         element.classList.add("selected");
     };
+
 </script>

@@ -194,11 +194,6 @@ model-viewer {
     /* outline: yellowgreen dashed; */
 }
 
-.step last-child {
-    /* OPTIONAL: removes extra space at the bottom of the story*/
-    /* margin-bottom: 0; */
-}
-
 .last-text-box {
     margin-bottom: 0;
 }
@@ -225,10 +220,6 @@ model-viewer {
     background-color: tomato;
     color: #fff;
 }
-
-
-
-
 
 /* scrollStorytelling CSS ends here */
 
