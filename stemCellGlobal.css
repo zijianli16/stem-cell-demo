@@ -151,6 +151,16 @@ model-viewer {
     color: #282828;
     bottom: 0;
     font-size: small;
+    margin: 0;
+}
+
+.figCaption {
+    padding: 4px;
+    border: 1px;
+    margin: 5px;
+    z-index: 3;
+    text-transform: uppercase;
+    color: black;
 }
 /* ==========THIS IS FOR janelleFoot_compare.html=========== */
 
